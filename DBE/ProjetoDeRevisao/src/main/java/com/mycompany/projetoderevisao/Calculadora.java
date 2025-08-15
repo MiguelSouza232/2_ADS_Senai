@@ -48,7 +48,6 @@ public class Calculadora extends javax.swing.JFrame {
 
         txtDisplay.setEditable(false);
         txtDisplay.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
-        txtDisplay.setText("jTextField1");
 
         btn7.setText("7");
 
