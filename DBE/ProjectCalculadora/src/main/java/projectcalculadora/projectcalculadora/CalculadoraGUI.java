@@ -141,9 +141,11 @@ public class CalculadoraGUI extends javax.swing.JFrame {
         txtResultado.setFont(new java.awt.Font("Arial", 1, 36)); // NOI18N
         txtResultado.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
         txtResultado.setText("0");
+        txtResultado.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
 
         btnZero.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         btnZero.setText("0");
+        btnZero.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         btnZero.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnZeroActionPerformed(evt);
@@ -152,6 +154,7 @@ public class CalculadoraGUI extends javax.swing.JFrame {
 
         btnUm.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         btnUm.setText("1");
+        btnUm.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         btnUm.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnUmActionPerformed(evt);
@@ -160,6 +163,7 @@ public class CalculadoraGUI extends javax.swing.JFrame {
 
         btnDois.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         btnDois.setText("2");
+        btnDois.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         btnDois.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnDoisActionPerformed(evt);
@@ -168,6 +172,7 @@ public class CalculadoraGUI extends javax.swing.JFrame {
 
         btnTres.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         btnTres.setText("3");
+        btnTres.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         btnTres.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnTresActionPerformed(evt);
@@ -176,6 +181,7 @@ public class CalculadoraGUI extends javax.swing.JFrame {
 
         btnQuatro.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         btnQuatro.setText("4");
+        btnQuatro.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         btnQuatro.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnQuatroActionPerformed(evt);
@@ -184,6 +190,7 @@ public class CalculadoraGUI extends javax.swing.JFrame {
 
         btnCinco.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         btnCinco.setText("5");
+        btnCinco.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         btnCinco.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnCincoActionPerformed(evt);
@@ -192,6 +199,7 @@ public class CalculadoraGUI extends javax.swing.JFrame {
 
         btnSeis.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         btnSeis.setText("6");
+        btnSeis.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         btnSeis.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnSeisActionPerformed(evt);
@@ -200,6 +208,7 @@ public class CalculadoraGUI extends javax.swing.JFrame {
 
         btnSete.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         btnSete.setText("7");
+        btnSete.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         btnSete.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnSeteActionPerformed(evt);
@@ -208,6 +217,7 @@ public class CalculadoraGUI extends javax.swing.JFrame {
 
         btnOito.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         btnOito.setText("8");
+        btnOito.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         btnOito.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnOitoActionPerformed(evt);
@@ -216,15 +226,17 @@ public class CalculadoraGUI extends javax.swing.JFrame {
 
         btnNove.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         btnNove.setText("9");
+        btnNove.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         btnNove.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnNoveActionPerformed(evt);
             }
         });
 
-        btnIgual.setBackground(new java.awt.Color(51, 153, 255));
+        btnIgual.setBackground(new java.awt.Color(153, 102, 255));
         btnIgual.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         btnIgual.setText("=");
+        btnIgual.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         btnIgual.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnIgualActionPerformed(evt);
@@ -234,6 +246,7 @@ public class CalculadoraGUI extends javax.swing.JFrame {
         btnMultiplicacao.setBackground(new java.awt.Color(204, 204, 204));
         btnMultiplicacao.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         btnMultiplicacao.setText("x");
+        btnMultiplicacao.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         btnMultiplicacao.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnMultiplicacaoActionPerformed(evt);
@@ -243,6 +256,7 @@ public class CalculadoraGUI extends javax.swing.JFrame {
         btnDivisao.setBackground(new java.awt.Color(204, 204, 204));
         btnDivisao.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         btnDivisao.setText("/");
+        btnDivisao.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         btnDivisao.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnDivisaoActionPerformed(evt);
@@ -252,6 +266,7 @@ public class CalculadoraGUI extends javax.swing.JFrame {
         btnLimpar.setBackground(new java.awt.Color(204, 204, 204));
         btnLimpar.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         btnLimpar.setText("C");
+        btnLimpar.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         btnLimpar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnLimparActionPerformed(evt);
@@ -261,6 +276,7 @@ public class CalculadoraGUI extends javax.swing.JFrame {
         btnSomar.setBackground(new java.awt.Color(204, 204, 204));
         btnSomar.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         btnSomar.setText("+");
+        btnSomar.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         btnSomar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnSomarActionPerformed(evt);
@@ -270,6 +286,7 @@ public class CalculadoraGUI extends javax.swing.JFrame {
         btnSubtrair.setBackground(new java.awt.Color(204, 204, 204));
         btnSubtrair.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         btnSubtrair.setText("-");
+        btnSubtrair.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         btnSubtrair.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnSubtrairActionPerformed(evt);
@@ -329,10 +346,10 @@ public class CalculadoraGUI extends javax.swing.JFrame {
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap(31, Short.MAX_VALUE)
+                .addContainerGap(7, Short.MAX_VALUE)
                 .addComponent(lblOperacao)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(txtResultado, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(txtResultado, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnSete, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
