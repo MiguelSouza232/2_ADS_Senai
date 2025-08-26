@@ -46,13 +46,13 @@
             <td class="nome">Carolina</td>
             <td class="servico">Mixagem Funk (4min)</td>
             <td class="qtde">3</td>
-            <td class="unitario">100</td>
+            <td class="unitario">d</td>
             <td class="total"></td>
           </tr>
           <tr class="cliente">
             <td class="nome">Rodolfo</td>
             <td class="servico">Mixagem Rap (3min)</td>
-            <td class="qtde">2</td>
+            <td class="qtde">asr</td>
             <td class="unitario">100</td>
             <td class="total"></td>
           </tr>
@@ -73,6 +73,41 @@
         </tbody>
       </table>
     </section>
+    <section>
+      <ul class="encomendas-titulo">
+        <li class="encomendas-item">Adicionar nova encomenda</li>
+      </ul>
+      <!-- Formulário -->
+      <form id="frmEncomenda>
+      <fieldset>
+        <legend>Dados Pessoais</legend>
+        <label>Nome e sobrenome:</label>
+        <input type=" text" id="nomesobrenome" name="" class="input-padrao" placeholder="Seu Nome Aqui">
+
+        <label>Nome:</label>
+        <input type="email" id="email" name="" class="input-padrao" placeholder="Digite o nome do(a) cliente">
+
+        <label>Qtde:</label>
+        <input type="tel" id="telefone" name="" class="input-padrao" placeholder="Digite a quantidade encomendada">
+
+        <label>R$ Unitário:</label>
+        <input id="mensagem" class="input-padrao" placeholder="Digite o valor unitário do seviço"></input>
+
+        <br>
+        <label>Serviço:
+          <select>
+            <option>Selecione</option>
+            <option>Remix</option>
+            <option>Set</option>
+            <option>Mashup</option>
+          </select>
+        </label>
+        <br>
+        </fieldset>
+
+        <button type="submit" id="adicionar-encomenda" class="enviar">Enviar</button>
+      </form>
+    </section>
   </main>
 
   <footer>
@@ -82,6 +117,7 @@
     </div>
   </footer>
   <script src="js/encomenda.js"></script>
+  <script src="js/adiciona_encomenda.js"></script>
 </body>
 
 </html>

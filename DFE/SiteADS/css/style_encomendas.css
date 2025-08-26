@@ -83,6 +83,73 @@ th{
   background-color: #eee;
 }
 
+/* Destaque da informação inválida */
+.info-invalida{
+  background-color: red;
+  color: white;
+}
+
+.info-invalida-unit{
+  background-color: purple;
+  color: red;
+}
+
+/*Formulário*/
+form{
+  color: white;
+	margin-top: 20px;
+	margin-left: 20%;
+  margin-bottom: 0;
+}
+form label, form legend{
+	display: block;
+	font-size: 20px;
+	margin: 0 0 10px;
+}
+fieldset{
+	width: 75%;
+	padding-left: 5%;
+	margin-bottom: 2%;
+}
+.input-padrao{
+	display: block;
+	margin: 0 0 20px;
+	padding: 10px 25px;
+	width: 85%;
+}
+
+.chk{
+	margin: 20px 0;
+}
+.enviar{
+	width: 40%;
+	padding: 15px 0;
+  margin-bottom: 20px;
+	background: #601BB9;
+	color: white;
+	font-weight: bold;
+	border: none;
+	border-radius: 5px;
+	transition: 1s all;
+	cursor: pointer;
+}
+.enviar:hover{
+	background: #7744B8;
+	transform: scale(1.0);
+}
+
+/*Div do retorno do formulário*/
+.divRetorno{
+    display: none;
+    margin-bottom: 15px;
+}
+.divRetorno p{
+    font-size: 24px;
+}
+
+
+
+
 /* Footer */
 .logo_footer {
   width: 5%;
