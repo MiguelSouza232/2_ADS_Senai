@@ -98,24 +98,25 @@ th{
 form{
   color: white;
 	margin-top: 20px;
-	margin-left: 20%;
+	margin-left: 5%;
   margin-bottom: 0;
 }
 form label, form legend{
 	display: block;
 	font-size: 20px;
-	margin: 0 0 10px;
+	margin: 10px 0 10px;
 }
-fieldset{
-	width: 75%;
-	padding-left: 5%;
-	margin-bottom: 2%;
+
+select{
+  display: block;
+  padding: 8px 15px;
 }
+
 .input-padrao{
 	display: block;
 	margin: 0 0 20px;
 	padding: 10px 25px;
-	width: 85%;
+	width: 40%;
 }
 
 .chk{
@@ -124,6 +125,7 @@ fieldset{
 .enviar{
 	width: 40%;
 	padding: 15px 0;
+  margin-top: 20px;
   margin-bottom: 20px;
 	background: #601BB9;
 	color: white;
