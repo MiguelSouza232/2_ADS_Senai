@@ -149,8 +149,23 @@ select{
     font-size: 24px;
 }
 
+/*Efeito para linha sumir quando excluida*/
+.fadeOut{
+  opacity: 0;
+  transition: opacity 1s ease-out;
+}
 
+/* Campo de Busca */
+#filtrar-tabela, label{
+  width: 19.5%;
+  height: 35px;
+  margin-bottom: 10px;
+}
 
+/* Esconde a linha para a busca */
+.invisivel{
+  display: none;
+}
 
 /* Footer */
 .logo_footer {
