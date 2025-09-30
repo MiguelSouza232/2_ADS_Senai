@@ -1,0 +1,25 @@
+{
+  "encomendas_web":[
+    {
+      "nome": "Miguel",
+      "produto": "Remix",
+      "qtde": 1,
+      "uniario": 150,
+      "total": 0
+    },
+    {
+      "nome": "Ana",
+      "produto": "Set",
+      "qtde": 1,
+      "uniario": 100,
+      "total": 0
+    },
+    {
+      "nome": "João",
+      "produto": "Mashup",
+      "qtde": 1,
+      "uniario": 80,
+      "total": 0
+    }
+  ]
+}
