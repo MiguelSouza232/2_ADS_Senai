@@ -7,12 +7,8 @@ public class Conta {
     private double saldo;
 
     public Conta(String banco, int agencia, int conta) {
-//        this.banco = banco;
-//        this.agencia = agencia;
-//        this.conta = conta;
-//        this.saldo = saldo;
-        this.setBanco(banco);
-        this.setAgencia(agencia);
+        this.setBanco(banco);;
+        this.setAgencia(agencia);;
         this.setConta(conta);
         this.saldo = 0;
     }
@@ -22,10 +18,10 @@ public class Conta {
     }
 
     public void setBanco(String banco) {
-        if(banco.length() > 2){
+        if (banco.length() > 2){
             this.banco = banco;
         }else{
-            System.out.println("Nome do banco inválido");
+            System.out.println("Nome dde banco inválido");
         }
     }
 
@@ -34,7 +30,7 @@ public class Conta {
     }
 
     public void setAgencia(int agencia) {
-        if(agencia > 0 && agencia < 1000){
+        if (agencia > 0 && agencia < 1000){
             this.agencia = agencia;
         }else{
             System.out.println("Agencia inválida");
@@ -48,7 +44,7 @@ public class Conta {
     public void setConta(int conta) {
         if (conta > 0 && conta < 10000){
             this.conta = conta;
-        }else {
+        }else{
             System.out.println("Conta inválida");
         }
     }
@@ -61,26 +57,28 @@ public class Conta {
         this.saldo = saldo;
     }
 
-    public String imprimir(){
+    public  String toString(){
         return "Banco: " + this.banco +
-                "\nAgência: " + this.agencia +
+                "\nAgencia: " + this.agencia +
                 "\nConta: " + this.conta +
                 "\nSaldo: " + this.saldo;
     }
 
-    public void depositar(double deposito){
-        if(deposito > 0){
-            this.saldo = this.saldo + deposito;
+    public void depositar(double valor){
+        if (valor > 0){
+            this.saldo += valor;
         }else{
-            System.out.println("Depósito inválido");
+            System.out.println("Deposito inválido");
         }
     }
 
-    public void sacar(double saque){
-        if(saque >= this.saldo){
-            this.saldo = this.saldo -saque;
-        } else{
-            System.out.println("Saldo insufisciente");
+    public void sacar(double valor){
+        if (valor <= this.saldo && valor > 0){
+            this.saldo -= valor;
+        }else{
+            System.out.println("Saque inválido");
         }
     }
+
+
 }

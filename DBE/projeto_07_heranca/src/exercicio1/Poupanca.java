@@ -1,4 +1,7 @@
+
 package exercicio1;
+
+import java.time.LocalDate;
 
 public class Poupanca extends Conta {
 
@@ -6,9 +9,10 @@ public class Poupanca extends Conta {
 
     public Poupanca(String banco, int agencia, int conta, int aniversario) {
         super(banco, agencia, conta);
+        this.aniversario = aniversario;
     }
 
-    public int getAniversario(){
+    public int getAniversario() {
         return aniversario;
     }
 
@@ -16,16 +20,11 @@ public class Poupanca extends Conta {
         if (aniversario >= 1 && aniversario <= 30){
             this.aniversario = aniversario;
         }else{
-            System.out.println("Aniversário Inválido");
+            System.out.println("Amiversário inválido ");
         }
     }
 
     public String toString(){
-//        return "Banco: " + super.getBanco() +
-//                "\nAgência: " + super.getAgencia() +
-//                "\nConta: " + super.getConta() +
-//                "\nSaldo: " + super.getSaldo() +
-//                "\nAniversario: " + this.aniversario();
         return super.toString() + "\nAniversário: " + this.aniversario;
     }
 }
