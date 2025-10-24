@@ -1,6 +1,6 @@
 package model;
 
-public class Produto {
+public abstract class Produto {
     private int codigo;
     private String descricao;
     private double valor;
@@ -15,11 +15,12 @@ public class Produto {
         return codigo;
     }
 
-    public void setCodigo(int argCodigo) {
+    public void setCodigo(int argCod) {
         //aceitar apenas códigos entre 1 e 100000
-        if (argCodigo >= 1 && argCodigo <= 100000) {
-            this.codigo = argCodigo;
-        } else {
+        if(argCod > 0 && argCod <= 100000){
+            this.codigo = argCod;
+        }
+        else{
             System.out.println("Código Inválido");
         }
     }
@@ -28,12 +29,13 @@ public class Produto {
         return descricao;
     }
 
-    public void setDescricao(String argDescricao) {
-        //aceitar apenas produtos com o nome entre 3 e 10 caracteres (inclusive)
-        if (argDescricao.length() >= 3 && argDescricao.length() <= 10) {
-            this.descricao = argDescricao;
-        } else {
-            System.out.println("Descrição Inválida");
+    public void setDescricao(String argDesc) {
+        //aceitar apenas produtos com nome entre 3 e 10 caracteres
+        if(argDesc.length() >= 3 && argDesc.length() <= 10){
+            this.descricao = argDesc;
+        }
+        else{
+            System.out.println("Descrição inválida");
         }
     }
 
@@ -42,19 +44,22 @@ public class Produto {
     }
 
     public void setValor(double argVlr) {
-        //aceitar apenas produtos com valores positivos
-        if (argVlr > 0) {
+        //aceitar apenas produtos com valores positivos.
+        if(argVlr > 0){
             this.valor = argVlr;
-        } else {
-            System.out.println("Valor Inválido");
+        }
+        else{
+            System.out.println("Valor inválido");
         }
     }
 
-    public String print() {
+    public String print(){
         String ret;
-        ret = "Código: " + this.codigo +
+        ret =   "Código: " + this.codigo +
                 "\nDescrição: " + this.descricao +
                 "\nValor: " + this.valor;
         return ret;
     }
+
+    public abstract void imprimirTipoProduto();
 }
