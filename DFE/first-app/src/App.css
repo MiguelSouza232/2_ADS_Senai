@@ -1,4 +1,7 @@
-/* Estilização do header */
+/* =========================
+   ESTILOS GERAIS
+========================= */
+
 header {
   background-color: #000000;
   width: 100%;
@@ -7,56 +10,117 @@ header {
   align-items: center;
 }
 
-.logo {
-  width: auto;
-  height: 70px;
-  margin-top: 5px;
-  display: flex;
-  align-items: center; /* Garante alinhamento vertical se necessário */
-  margin-left: 100px;
-}
-
-/* Estilização do menu */
-nav {
-  color: white;
-  font-size: 20px;
-  margin-right: 100px;
-}
-
-nav li {
-  display: inline;
-  margin-right: 40px;
-}
-
-/* Estilização da div do header */
 .divHeader {
   width: 100%;
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  padding: 0 40px;
 }
 
-/* Footer */
+.logo {
+  width: auto;
+  height: 70px;
+  margin-top: 5px;
+}
+
+/* =========================
+   MENU PADRÃO (DESKTOP)
+========================= */
+
+nav.menu ul {
+  display: flex;
+  list-style: none;
+  gap: 40px;
+  font-size: 20px;
+  margin: 0;
+  padding: 0;
+}
+
+nav.menu li a {
+  text-decoration: none;
+  color: white;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 40px;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+/* =========================
+   RESPONSIVO (MOBILE)
+========================= */
+@media (max-width: 768px) {
+  header {
+    height: auto;
+    padding: 20px;
+  }
+
+  .logo {
+    width: 10%;
+    height: auto;
+  }
+
+  /* Mostra o botão hamburguer */
+  .menu-toggle {
+    display: block;
+  }
+
+  /* Menu fechado */
+  nav.menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #000000;
+    width: 100%;
+    text-align: center;
+    z-index: 10;
+  }
+
+  /* Menu aberto */
+  nav.menu.ativo {
+    display: block;
+  }
+
+  nav.menu ul {
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px 0;
+  }
+
+  nav.menu li {
+    font-size: 22px;
+  }
+}
+
+/* =========================
+   FOOTER
+========================= */
+
 .logo_footer {
   width: 5%;
   display: flex;
 }
 
-footer p {
-  /* display: inline-block; */
-  text-align: right;
-  /* width: 82%; */
-  font-size: 20px;
-}
-
 footer {
-  display: flex; 
-  flex-direction: column; 
-  justify-content: end; 
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
   align-items: end;
+  background-color: black;
   background-size: cover;
   background-position: center;
-  background-color: black;
   padding: 30px;
+}
+
+footer p {
+  text-align: right;
+  font-size: 20px;
 }
 
 a {
