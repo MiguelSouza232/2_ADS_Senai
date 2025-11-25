@@ -1,13 +1,30 @@
 /* =========================
-   ESTILOS GERAIS
+   FONTES E GERAIS
+========================= */
+
+/* @font-face {
+  font-family: "Poppins";
+  src: url("/fonts/Poppins/Poppins-Medium.ttf");
+} */
+
+
+body {
+  margin: 0;
+  border: 0;
+  background-color: #111111;
+  font-family: "Poppins";
+}
+
+/* =========================
+   HEADER
 ========================= */
 
 header {
-  background-color: #000000;
   width: 100%;
   height: 120px;
   display: flex;
   align-items: center;
+  background-color: #000000;
 }
 
 .divHeader {
@@ -20,28 +37,26 @@ header {
 
 .logo {
   width: auto;
-  height: 70px;
+  height: 50px;
   margin-top: 5px;
 }
 
-/* =========================
-   MENU PADRÃO (DESKTOP)
-========================= */
-
+/* MENU DESKTOP */
 nav.menu ul {
   display: flex;
   list-style: none;
   gap: 40px;
-  font-size: 20px;
   margin: 0;
   padding: 0;
 }
 
 nav.menu li a {
-  text-decoration: none;
   color: white;
+  text-decoration: none;
+  font-size: 20px;
 }
 
+/* BOTÃO HAMBÚRGUER */
 .menu-toggle {
   display: none;
   font-size: 40px;
@@ -52,7 +67,7 @@ nav.menu li a {
 }
 
 /* =========================
-   RESPONSIVO (MOBILE)
+   RESPONSIVO
 ========================= */
 @media (max-width: 768px) {
   header {
@@ -61,16 +76,13 @@ nav.menu li a {
   }
 
   .logo {
-    width: 10%;
-    height: auto;
+    height: 40px;
   }
 
-  /* Mostra o botão hamburguer */
   .menu-toggle {
     display: block;
   }
 
-  /* Menu fechado */
   nav.menu {
     display: none;
     position: absolute;
@@ -82,7 +94,6 @@ nav.menu li a {
     z-index: 10;
   }
 
-  /* Menu aberto */
   nav.menu.ativo {
     display: block;
   }
@@ -99,13 +110,117 @@ nav.menu li a {
 }
 
 /* =========================
-   FOOTER
+   BANNER
 ========================= */
 
-.logo_footer {
-  width: 5%;
-  display: flex;
+.divBanner {
+  width: 100%;
 }
+
+.banner {
+  width: 100%;
+  height: 50%;
+  object-fit: cover;
+  object-position: center 50%;
+}
+
+/* =========================
+   BIOGRAFIA
+========================= */
+
+.bio {
+  margin: 0;
+  text-align: justify;
+  width: 60%;
+  margin-left: 20%;
+}
+
+.titulo_bio {
+  padding-top: 100px;
+  text-align: center;
+  color: white;
+}
+
+.img_bio {
+  width: 10%;
+  float: left;
+  margin-right: 20px;
+}
+
+p {
+  color: white;
+}
+
+/* =========================
+   NOSSO ESTABELECIMENTO
+========================= */
+
+.mapaGeral {
+  background: linear-gradient(#111111, #6d24ca);
+}
+
+.mapaGeral p {
+  text-align: center;
+}
+
+.mapa {
+  text-align: center;
+}
+
+/* =========================
+   SERVIÇOS
+========================= */
+
+.titulo_servicos {
+  padding-top: 100px;
+  text-align: center;
+  color: white;
+}
+
+.servicosGeral {
+  padding-top: 1px;
+  background: linear-gradient(#6d24ca, #111111);
+}
+
+.div_servicos {
+  width: 60%;
+  margin-left: 35%;
+}
+
+.servicos {
+  width: 30%;
+  display: inline-block;
+  vertical-align: top;
+  margin-top: 50px;
+  margin-left: 50px;
+  color: white;
+}
+
+.servicos li {
+  line-height: 2;
+}
+
+.img_servicos {
+  width: 10%;
+  border-radius: 3px;
+  transition: transform 0.3s;
+}
+
+.img_servicos:hover {
+  transform: scale(1.1);
+}
+
+/* =========================
+   VÍDEO
+========================= */
+
+.video {
+  padding: 5% 0 5% 28%;
+}
+
+/* =========================
+   FOOTER
+========================= */
 
 footer {
   display: flex;
@@ -113,9 +228,14 @@ footer {
   justify-content: end;
   align-items: end;
   background-color: black;
+  padding: 30px;
   background-size: cover;
   background-position: center;
-  padding: 30px;
+}
+
+.logo_footer {
+  width: 5%;
+  display: flex;
 }
 
 footer p {
