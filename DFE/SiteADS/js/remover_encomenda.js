@@ -1,14 +1,16 @@
 var tabela = document.querySelector("table");
 
-//Escuta o duplo clique na linha que será removida
-tabela.addEventListener("dblclick", function(event){
+tabela.addEventListener("dblclick", function(event) {
+  var elemento = event.target.parentNode;
 
-  //Adiciona p efeito na linha
-  event.target.parentNode.classList.add("fadeOut");
+  // Evita remover cabeçalho
+  if (elemento.tagName !== "TR" || elemento.parentNode.tagName === "THEAD") {
+    return;
+  }
 
-  //Atrasa a exclusão da linha para ver o efeito
-  setTimeout(function(){
-    //Exclui a linha clicada
-    event.target.parentNode.remove();
-  }, 600)
+  elemento.classList.add("fadeOut");
+
+  setTimeout(function () {
+    elemento.remove();
+  }, 600);
 });

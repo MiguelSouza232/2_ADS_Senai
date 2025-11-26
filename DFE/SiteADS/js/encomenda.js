@@ -1,57 +1,45 @@
-// document.querySelector(".total").textContent=document.querySelector(".qtde").textContent * document.querySelector(".unitario").textContent
-//Captura as encomendas da tabela
+// Captura todas as encomendas já existentes na tabela
 var clientes = document.querySelectorAll(".cliente");
 
-// Passa por todas as encmendas e calcula o valor total
-for (var count = 0; count < clientes.length; count++) {
-  // var cliente = clientes[count];
+// Passa por cada linha e aplica validações
+clientes.forEach(function (cliente) {
 
-  // Captura valores de quantidade e valor unitário
-  var tab_qtde = clientes[count].querySelector(".qtde").textContent;
-  var tab_unitario = clientes[count].querySelector(".unitario").textContent;
+  var qtde = cliente.querySelector(".qtde").textContent;
+  var unit = cliente.querySelector(".unitario").textContent;
 
-  //Verifica se a quantidade é válida
-  if (tab_qtde < 1 || isNaN(tab_qtde)) {
-    //A quantidae é menor que 1 ou não é numérica
-    clientes[count].querySelector(".qtde").textContent = "Quantidade inválida!";
-    clientes[count].classList.add("info-invalida");
-  } else {
-    //Verifica se o valor unitário é valido
-    if (tab_unitario <= 0 || isNaN(tab_unitario)) {
-      //O unitário é menor ou igual a 0 ou não é numérico
-      clientes[count].querySelector(".unitario").textContent =
-        "Valor Unitário inválido";
-      clientes[count].classList.add("info-invalida-unit");
-    } else {
-      //Calcula e exibe o total
-      clientes[count].querySelector(".total").textContent = calcularTotal(
-        tab_qtde,
-        tab_unitario
-      );
+  qtde = Number(qtde);
+  unit = Number(unit);
 
-      //Envia formatação para o valor unitário
-      clientes[count].querySelector(".unitario").textContent = formataValor(
-        parseFloat(tab_unitario)
-      );
-    }
+  // Valida quantidade
+  if (isNaN(qtde) || qtde < 1) {
+    cliente.querySelector(".qtde").textContent = "Quantidade inválida!";
+    cliente.classList.add("info-invalida");
+    return;
   }
-}
 
-// Função de cálculo do valor total
+  // Valida valor unitário
+  if (isNaN(unit) || unit <= 0) {
+    cliente.querySelector(".unitario").textContent = "Valor inválido!";
+    cliente.classList.add("info-invalida-unit");
+    return;
+  }
+
+  // Calcula total
+  var total = calcularTotal(qtde, unit);
+
+  cliente.querySelector(".total").textContent = formataValor(total);
+  cliente.querySelector(".unitario").textContent = formataValor(unit);
+});
+
+// ---------------------- FUNÇÕES -----------------------
+
 function calcularTotal(qtde, unit) {
-  var total = 0;
-
-  total = qtde * unit;
-
-  return formataValor(total);
+  return qtde * unit;
 }
 
-//Função que formata os valores em R$
 function formataValor(valor) {
-  var valor_formatado = valor.toLocaleString("pt-BR", {
+  return valor.toLocaleString("pt-BR", {
     style: "currency",
-    currency: "BRL",
+    currency: "BRL"
   });
-
-  return valor_formatado;
 }

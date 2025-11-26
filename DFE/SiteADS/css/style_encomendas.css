@@ -90,7 +90,7 @@ th{
 }
 
 .info-invalida-unit{
-  background-color: purple;
+  background-color: red;
   color: red;
 }
 
@@ -160,6 +160,10 @@ select{
   width: 19.5%;
   height: 35px;
   margin-bottom: 10px;
+}
+
+label{
+  color: white;
 }
 
 /* Esconde a linha para a busca */
