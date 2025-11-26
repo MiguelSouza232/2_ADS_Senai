@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import '../App.css';
-import logo from '../assets/SubLogoCelsinho.png';
+import logo from '../assets/LogoCelsinho.png';
 
 export default function Header() {
   const [menuAberto, setMenuAberto] = useState(false);

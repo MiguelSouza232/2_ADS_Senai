@@ -2,10 +2,10 @@
    FONTES E GERAIS
 ========================= */
 
-/* @font-face {
+@font-face {
   font-family: "Poppins";
-  src: url("/fonts/Poppins/Poppins-Medium.ttf");
-} */
+  src: url("../public/fonts/Poppins/Poppins-Medium.ttf");
+}
 
 
 body {
