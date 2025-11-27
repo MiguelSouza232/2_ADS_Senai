@@ -1,0 +1,202 @@
+@font-face {
+  font-family: Poppins;
+  src: url("../fonts/Poppins/Poppins-Medium.ttf");
+}
+
+/* Estilização do body */
+body {
+  margin: 0;
+  border: 0;
+  background-color: #111111;
+  font-family: "Poppins";
+}
+
+/* Estilização do header */
+header {
+  /* background-color: #000000; */
+  width: 100%;
+  height: 120px;
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  width: auto;
+  height: 50px;
+  margin-top: 5px;
+  display: flex;
+  align-items: center; /* Garante alinhamento vertical se necessário */
+  margin-left: 100px;
+}
+
+/* Estilização do menu */
+nav {
+  color: white;
+  font-size: 20px;
+  margin-right: 100px;
+}
+
+nav li {
+  display: inline;
+  margin-right: 40px;
+}
+
+/* Estilização da div do header */
+.divHeader {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Título */
+.encomendas-titulo {
+  font-size: 40px;
+  font-weight: bold;
+  color: white;
+  list-style: none;
+}
+
+.encomendas-item:before {
+  content: "🛒";
+}
+
+/* Tabela de Encomendas */
+table{
+  width: 100%;
+  margin-bottom: 2%;
+  table-layout: fixed;
+}
+
+td, th{
+  padding: 10px;
+  margin: 0;
+  border: 1px solid #ccc;
+  text-align: center;
+}
+
+td{
+  color: white;
+}
+
+th{
+  font-weight: bold;
+  background-color: #eee;
+}
+
+/* Destaque da informação inválida */
+.info-invalida{
+  background-color: red;
+  color: white;
+}
+
+.info-invalida-unit{
+  background-color: red;
+  color: red;
+}
+
+/*Formulário*/
+form{
+  color: white;
+	margin-top: 20px;
+	margin-left: 5%;
+  margin-bottom: 0;
+}
+form label, form legend{
+	display: block;
+	font-size: 20px;
+	margin: 10px 0 10px;
+}
+
+select{
+  display: block;
+  padding: 8px 15px;
+}
+
+.input-padrao{
+	display: block;
+	margin: 0 0 20px;
+	padding: 10px 25px;
+	width: 40%;
+}
+
+.chk{
+	margin: 20px 0;
+}
+.enviar{
+	width: 40%;
+	padding: 15px 0;
+  margin-top: 20px;
+  margin-bottom: 20px;
+	background: #601BB9;
+	color: white;
+	font-weight: bold;
+	border: none;
+	border-radius: 5px;
+	transition: 1s all;
+	cursor: pointer;
+}
+.enviar:hover{
+	background: #7744B8;
+	transform: scale(1.0);
+}
+
+/*Div do retorno do formulário*/
+.divRetorno{
+    display: none;
+    margin-bottom: 15px;
+}
+.divRetorno p{
+    font-size: 24px;
+}
+
+/*Efeito para linha sumir quando excluida*/
+.fadeOut{
+  opacity: 0;
+  transition: opacity 1s ease-out;
+}
+
+/* Campo de Busca */
+#filtrar-tabela, label{
+  width: 19.5%;
+  height: 35px;
+  margin-bottom: 10px;
+}
+
+label{
+  color: white;
+}
+
+/* Esconde a linha para a busca */
+.invisivel{
+  display: none;
+}
+
+/* Footer */
+.logo_footer {
+  width: 5%;
+  display: flex;
+}
+
+footer p {
+  /* display: inline-block; */
+  text-align: right;
+  /* width: 82%; */
+  font-size: 20px;
+  color: white;
+}
+
+footer {
+  display: flex; 
+  flex-direction: column; 
+  justify-content: end; 
+  align-items: end;
+  background-size: cover;
+  background-position: center;
+  background-color: black;
+  padding: 30px;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
